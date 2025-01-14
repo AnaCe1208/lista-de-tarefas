@@ -1,0 +1,168 @@
+/* Importa a fonte "Roboto" do Google Fonts com diferentes pesos e itálicos */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Estilo para o body da página */
+body{
+    background: #222435; /* Cor de fundo escura */
+    font-family: 'Roboto', sans-serif; /* Define a fonte como 'Roboto' */
+}
+
+/* Remove a borda de foco dos elementos ao serem selecionados */
+*:focus{
+    outline:none;
+}
+
+/* Estilo para o título (h1) */
+h1{
+    font-weight: 900; /* Peso da fonte mais forte */
+    color: #7d83b9; /* Cor do título em um tom de azul claro */
+    text-align: center; /* Alinha o título no centro */
+}
+
+/* Estilo para o formulário */
+form{
+    display: flex; /* Exibe os elementos do formulário em linha */
+    position: relative; /* Define a posição relativa para o botão */
+    width: 600px; /* Largura do formulário */
+    height: 60px; /* Altura do formulário */
+    margin: 30px auto; /* Adiciona uma margem superior e inferior de 30px e centraliza o formulário */
+    margin-bottom: 60px; /* Adiciona uma margem inferior de 60px */
+}
+
+/* Estilo para o campo de entrada de texto */
+input{
+    display: flex; /* Exibe o campo de entrada como um flex */
+    width: 100%; /* Largura de 100% do formulário */
+    height: 60px; /* Altura do campo de entrada */
+    background: #2d3046; /* Cor de fundo escura */
+    border:none; /* Remove a borda do campo de entrada */
+    padding-left:30px; /* Adiciona um espaço interno à esquerda de 30px */
+    font-size:16px; /* Tamanho da fonte */
+    border-radius:10px; /* Bordas arredondadas */
+    color:white; /* Cor do texto dentro do campo de entrada */
+}
+
+/* Estilo para o botão de adicionar tarefa */
+button.add{
+    position: absolute; /* Coloca o botão em uma posição absoluta dentro do formulário */
+    top:0; /* Coloca o botão no topo */
+    right: 0; /* Coloca o botão à direita */
+    background: #363b65; /* Cor de fundo do botão */
+    border:none; /* Remove a borda do botão */
+    color:white; /* Cor do texto do botão */
+    cursor: pointer; /* Adiciona um cursor de ponteiro quando o mouse passa sobre o botão */
+    padding: 10px 25px; /* Preenche o botão com um espaçamento interno de 10px na vertical e 25px na horizontal */
+    height: 61px; /* Define a altura do botão */
+    border-top-right-radius: 10px; /* Arredonda o canto superior direito */
+    border-bottom-right-radius: 10px; /* Arredonda o canto inferior direito */
+}
+
+/* Efeito de hover no botão de adicionar tarefa */
+button.add:hover{
+    color:white; /* Cor do texto do botão durante o hover */
+    background: #363f88; /* Cor de fundo do botão durante o hover */
+}
+
+/* Estilo para a lista de tarefas */
+.listaTarefas{
+    display: flex; /* Exibe os itens da lista em linha */
+    justify-content: center; /* Centraliza os itens dentro do container */
+    flex-flow: column wrap; /* Exibe os itens em colunas, permitindo que quebrem para a próxima linha */
+    width: 600px; /* Largura da lista */
+    margin:auto; /* Centraliza a lista */
+}
+
+/* Estilo para cada item da lista de tarefas */
+.item{
+    display: flex; /* Exibe os itens da lista em linha */
+    justify-content: space-between; /* Espaça os itens de forma que um fique de cada lado */
+    border:1px solid #363b65; /* Borda fina com a cor de fundo */
+    margin-bottom: 10px; /* Adiciona um espaço de 10px entre os itens */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse sobre os itens */
+}
+
+/* Efeito de hover nos itens da lista */
+.item:hover{
+    background: #151627; /* Altera a cor de fundo ao passar o mouse sobre o item */
+}
+
+/* Estilo para o texto dentro dos itens da lista */
+.item span{
+    text-align: start; /* Alinha o texto à esquerda */
+    width: 100%; /* Largura total do item */
+    color: white; /* Cor do texto */
+    margin-right: 10px; /* Adiciona uma margem à direita do texto */
+    padding: 10px 15px; /* Preenche o item com espaçamento interno */
+}
+
+/* Estilo para os itens que estão completos */
+.item.completo{
+    display: flex; /* Exibe os itens completos em linha */
+    justify-content: space-between; /* Espaça os itens */
+    background: #1e1f2e; /* Cor de fundo diferente para itens completos */
+    border:none; /* Remove a borda */
+    margin-bottom: 10px; /* Adiciona um espaço entre os itens */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse sobre o item */
+    opacity: 0.4; /* Diminui a opacidade dos itens completos */
+}
+
+/* Estilo para o texto de itens completos */
+.item.completo span{
+    text-align: start; /* Alinha o texto à esquerda */
+    width: 100%; /* Largura total do item */
+    color: #4d506e; /* Cor do texto mais clara para itens completos */
+    margin-right: 10px; /* Margem à direita */
+    padding: 10px 15px; /* Preenche o item com espaçamento interno */
+    text-decoration: line-through; /* Adiciona um risco sobre o texto para indicar que a tarefa foi completada */
+}
+
+/* Estilo para o botão de deletar um item */
+button.del{
+    border:none; /* Remove a borda do botão */
+    background: none; /* Remove o fundo do botão */
+    color: #4d506e; /* Cor do texto do botão */
+    padding:15px; /* Preenche o botão com espaçamento interno */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse sobre o botão */
+}
+
+/* Efeito de hover no botão de deletar */
+button.del:hover{
+    background: #ff004c; /* Altera o fundo para vermelho ao passar o mouse */
+    border:none; /* Remove a borda do botão */
+    color: white; /* Altera a cor do texto para branco */
+    padding:15px; /* Mantém o preenchimento */
+    cursor: pointer; /* Cursor de ponteiro */
+}
+
+/* Estilo para o botão que deleta todas as tarefas */
+button.deleteAll{
+    border:1px solid #ff004c; /* Borda vermelha ao redor do botão */
+    background: none; /* Sem fundo */
+    padding:15px; /* Preenche o botão com espaçamento interno */
+    color: #ff004c; /* Cor do texto do botão */
+    font-weight: bold; /* Texto em negrito */
+    border-radius:5px; /* Bordas arredondadas */
+    cursor: pointer; /* Cursor de ponteiro */
+    margin-top: 30px; /* Adiciona um espaço acima do botão */
+}
+
+/* Efeito de hover no botão de deletar todas as tarefas */
+button.deleteAll:hover{    
+    background: #ff004c; /* Altera o fundo para vermelho ao passar o mouse */
+    color: white; /* Altera a cor do texto para branco */
+}
+
+/* Estilo para o ícone central (quando a lista estiver vazia) */
+.icone-central{
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do container */
+}
+
+/* Estilos responsivos para telas menores que 900px */
+@media screen and (max-width: 900px){
+    form{
+        width: 100%; /* O formulário ocupa 100% da largura da tela */
+    }
+    .listaTarefas{
+        width: 100%; /* A lista ocupa 100% da largura da tela */
+    }
+}
